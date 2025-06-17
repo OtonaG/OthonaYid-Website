@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otona Agricultural Products Wholesale Trade One Member Plc</title>
+    <style>
+        :root {
+            --primary-color: #2c5e2e; /* Dark green for agriculture */
+            --secondary-color: #f0e68c; /* Khaki for a natural feel */
+            --accent-color: #8b4513; /* Saddle brown for earthiness */
+            --text-color: #333333;
+            --light-bg-color: #f9f9f9;
+            --white-color: #ffffff;
+            --container-padding: 20px;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--container-padding);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em; /* Placeholder for logo image */
+            font-weight: bold;
+            margin-right: 10px;
+            padding: 10px;
+            background-color: var(--white-color);
+            color: var(--primary-color);
+            border-radius: var(--border-radius);
+            display: inline-block;
+        }
+        
+        header h1 {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        nav {
+            background-color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--white-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--primary-color);
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/400?random=1'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            color: var(--white-color);
+            padding: 60px var(--container-padding);
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1e421f; /* Darker shade of primary */
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--white-color);
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        .card ul li {
+            margin-bottom: 5px;
+        }
+
+        #contact-info {
+            background-color: var(--secondary-color);
+            padding: 40px 0;
+        }
+
+        #contact-info .container {
+            text-align: center;
+        }
+        
+        #contact-info p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header .logo-container {
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+            header h1 {
+                font-size: 1em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            margin-right: 15px; /* Ensure it's on the right */
+        }
+        .hamburger-menu div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+            header .logo-container {
+                width: 100%;
+                justify-content: space-between; /* Pushes hamburger to the right */
+                padding: 0 var(--container-padding);
+            }
+             header h1 {
+                display: none; /* Hide title next to logo on mobile, or adjust as needed */
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            nav ul {
+                display: none; /* Hide by default */
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--accent-color); /* Ensure background for dropdown */
+            }
+            nav ul.active {
+                display: flex; /* Show when active */
+            }
+            nav ul li {
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            nav ul li:first-child {
+                border-top: none;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <span class="logo">OAP</span>
+                <h1>Otona Agricultural Products Wholesale Trade One Member Plc</h1>
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mainNav">
+        <div class="container">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g6cb5df353d0a53bb5bf4a61f55246241c56efc88e0702ec12db5182342c8a62204c872447717a7fc8157adc95021b23d1440344c9e285fab18296a8af76cdea0_1280.jpg');">
+        <h2>Your Trusted Partner in Global Trade</h2>
+        <p>Exporting Quality Agricultural Products</p>
+        <a href="#products" class="btn">Explore Our Products</a>
+    </section>
+
+    <section id="main-activities">
+        <div class="container">
+            <h2>Our Core Business Activities</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Export Division</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; margin-bottom: 15px;">
+                        <div style="text-align: center;">
+                            <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g80b9b51dd2a8f9215c283b06b1f597181d1c04870793e2f7c193c17dc754d5b7dce6c5771d08e26aaa5770a9a198bd518609a217c62fbda506e0d2fb102c8990_1280.jpg" alt="Chickpeas" style="width:80px; height:80px; border-radius: 50%; object-fit: cover;">
+                            <p style="font-size: 0.8em; margin: 5px 0 0 0; font-weight: bold;">Beans</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g5cd05d452e3c39cb0cb47055e7eafd4e61e63d216a014f0421ce10cec1fbab029f43747b7d0669a3fe47ce6f7f02277def4681d99cfe9a59a53a9e4ba806bae1_1280.jpg" alt="Peas" style="width:80px; height:80px; border-radius: 50%; object-fit: cover;">
+                            <p style="font-size: 0.8em; margin: 5px 0 0 0; font-weight: bold;">Peas</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g55dc93a18738ea2c63381cf22ad3025097f26eb38a85df16188855373a0645abb5c9d22768f33336afa76893daa8e485b97265b6dd13aac16f60de7946179563_1280.jpg" alt="Cereal Grains" style="width:80px; height:80px; border-radius: 50%; object-fit: cover;">
+                            <p style="font-size: 0.8em; margin: 5px 0 0 0; font-weight: bold;">Cereals</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/gf8b9c73116e26fae697ae99d6690caf885e770bba9eb8f62af6e51ae6eb2b5ccb4906abe3b0e948533f8d19894d9ccc410a571074fe4f3b69cf8ac0a0bafcc9a_1280.jpg" alt="Seeds" style="width:80px; height:80px; border-radius: 50%; object-fit: cover;">
+                            <p style="font-size: 0.8em; margin: 5px 0 0 0; font-weight: bold;">Seeds</p>
+                        </div>
+                    </div>
+                    <p>We specialize in the export of high-quality agricultural products. Our primary exports include premium seeds, nutritious peas, versatile beans, and staple cereals.</p>
+                    <p>We are committed to providing premium products to the international market, contributing to food security and agricultural development globally.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Otona Agricultural Products Wholesale Trade One Member Plc Import and Export is a dynamic company engaged in both exporting and importing business lines. Since our establishment, we have built a strong foundation with well-established management and technical staff. We are currently in a business expansion process, aiming to enhance our export capabilities while continuing our robust import operations.</p>
+            <p>Our company operates with a paid-up capital of <strong>40,000,000.00 Birr</strong>. We pride ourselves on our commitment to quality, reliability, and customer satisfaction.</p>
+            <p>We have a strong banking relationship, particularly with Nib Bank's Lideta branch, which has been instrumental in our import activities and foreign exchange transactions. We have successfully generated over <strong>182,400 USD</strong> through this branch.</p>
+            <p>Our annual average turnover is approximately <strong>76.0 million Birr</strong>, reflecting the high demand for our products and services and our operational efficiency.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Agricultural Exports</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                        <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g80b9b51dd2a8f9215c283b06b1f597181d1c04870793e2f7c193c17dc754d5b7dce6c5771d08e26aaa5770a9a198bd518609a217c62fbda506e0d2fb102c8990_1280.jpg" alt="Chickpeas" style="width:100%; height:auto; border-radius: 4px; object-fit: cover;">
+                        <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g5cd05d452e3c39cb0cb47055e7eafd4e61e63d216a014f0421ce10cec1fbab029f43747b7d0669a3fe47ce6f7f02277def4681d99cfe9a59a53a9e4ba806bae1_1280.jpg" alt="Peas" style="width:100%; height:auto; border-radius: 4px; object-fit: cover;">
+                        <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/g55dc93a18738ea2c63381cf22ad3025097f26eb38a85df16188855373a0645abb5c9d22768f33336afa76893daa8e485b97265b6dd13aac16f60de7946179563_1280.jpg" alt="Cereal Grains" style="width:100%; height:auto; border-radius: 4px; object-fit: cover;">
+                        <img src="https://public.youware.com/users-website-assets/prod/4a5078ab-7618-4c31-9404-72508c7e457e/gf8b9c73116e26fae697ae99d6690caf885e770bba9eb8f62af6e51ae6eb2b5ccb4906abe3b0e948533f8d19894d9ccc410a571074fe4f3b69cf8ac0a0bafcc9a_1280.jpg" alt="Rice Grains" style="width:100%; height:auto; border-radius: 4px; object-fit: cover;">
+                    </div>
+                    <p>We export a variety of premium agricultural goods:</p>
+                    <ul>
+                        <li>High-Quality Seeds (various types)</li>
+                        <li>Nutritious Peas</li>
+                        <li>Versatile Beans (e.g., Fava, Kidney, Chickpeas - examples)</li>
+                        <li>Staple Cereals (e.g., Wheat, Maize, Sorghum - examples)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Export Services</h3>
+                    <p>We provide comprehensive export services for our agricultural products, ensuring quality control, timely shipment, and adherence to international standards. We are expanding our export operations to meet growing global demand.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Logistics & Supply Chain</h3>
+                    <p>We manage efficient logistics and supply chain operations for both our export and import businesses, ensuring reliable delivery and competitive pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries about our products, services, or business opportunities, please get in touch:</p>
+            <p><strong>Otona Agricultural Products Wholesale Trade One Member Plc</strong></p>
+            <p><strong>Business PROMOTER:</strong> Otona Agricultural Product Wholesale Trade One Member Plc</p>
+            <p><strong>CONTACT PERSON:</strong> Ato GETACHEW KEBEDE SEYID</p>
+            <p><strong>Phone:</strong> +251-911491603</p>
+            <p><strong>Address:</strong></p>
+            <ul style="list-style-type: none; text-align: center; margin-bottom: 15px;">
+                <li>BRANCH 1: WOLAYITA SODO</li>
+                <li>BRANCH 2: ADAMA</li>
+            </ul>
+            <p>We look forward to hearing from you and exploring potential collaborations.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> Otona Agricultural Products Wholesale Trade One Member Plc. All Rights Reserved.</p>
+            <p>
+                <a href="#home">Home</a> | 
+                <a href="#about">About</a> | 
+                <a href="#products">Products</a> | 
+                <a href="#services">Services</a> | 
+                <a href="#contact">Contact</a>
+            </p>
+            <p>Designed by Youware</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Update active class
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+
+                // Close mobile menu if open
+                const navUl = document.querySelector('#mainNav ul');
+                if (navUl.classList.contains('active')) {
+                    navUl.classList.remove('active');
+                    document.getElementById('hamburgerMenu').classList.remove('open');
+                }
+            });
+        });
+
+        // Hamburger menu toggle
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mainNavUl = document.querySelector('#mainNav ul');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mainNavUl.classList.toggle('active');
+            hamburgerMenu.classList.toggle('open'); // For potential styling of the hamburger icon itself
+        });
+
+        // Highlight active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const headerOffset = 100; // Adjust as needed
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - headerOffset) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            // Special case for top of page for "home"
+            if (pageYOffset < sections[0].offsetTop - headerOffset) {
+                 current = 'home';
+            }
+
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
